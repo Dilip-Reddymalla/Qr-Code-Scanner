@@ -5,7 +5,7 @@ import time
 
 cam = cv2.VideoCapture(0)
 cam.set(3, 640)
-cam.set(5, 480)
+cam.set(4, 480)
 
 
 while True:
@@ -17,6 +17,7 @@ while True:
         break
     
     cv2.imshow("QR Code Scanner", frames)
+    key = cv2.waitKey(1)
 
     scanned_codes = decode(frames)
     
